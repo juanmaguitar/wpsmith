@@ -1,0 +1,34 @@
+{
+  "name": "Default Seeder",
+  "description": "Seeds the database with basic test data",
+  "steps": [
+    {
+      "command": "user create editor editor@example.com --role=editor --user_pass=password",
+      "description": "Create editor user"
+    },
+    {
+      "command": "user create author author@example.com --role=author --user_pass=password",
+      "description": "Create author user"
+    },
+    {
+      "command": "post generate --count=10",
+      "description": "Generate 10 test posts"
+    },
+    {
+      "command": "post create --post_type=page --post_title=About --post_status=publish --post_content='This is the about page.'",
+      "description": "Create About page"
+    },
+    {
+      "command": "post create --post_type=page --post_title=Contact --post_status=publish --post_content='This is the contact page.'",
+      "description": "Create Contact page"
+    },
+    {
+      "command": "term create category News --description='Latest news and updates'",
+      "description": "Create News category"
+    },
+    {
+      "command": "term create category Tutorials --description='How-to guides and tutorials'",
+      "description": "Create Tutorials category"
+    }
+  ]
+}

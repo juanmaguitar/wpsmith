@@ -1,0 +1,38 @@
+{
+  "name": "WooCommerce Seeder",
+  "description": "Seeds the database with WooCommerce test data",
+  "steps": [
+    {
+      "command": "user create editor editor@example.com --role=editor --user_pass=password",
+      "description": "Create editor user"
+    },
+    {
+      "command": "user create customer customer@example.com --role=customer --user_pass=password",
+      "description": "Create customer user"
+    },
+    {
+      "command": "wc product create --name='Sample Product 1' --type=simple --regular_price=19.99 --description='A sample product for testing.'",
+      "description": "Create sample product 1"
+    },
+    {
+      "command": "wc product create --name='Sample Product 2' --type=simple --regular_price=29.99 --description='Another sample product.'",
+      "description": "Create sample product 2"
+    },
+    {
+      "command": "wc product create --name='Premium Product' --type=simple --regular_price=99.99 --sale_price=79.99 --description='A premium product on sale.'",
+      "description": "Create premium product"
+    },
+    {
+      "command": "post create --post_type=page --post_title=Shop --post_status=publish",
+      "description": "Create Shop page"
+    },
+    {
+      "command": "post create --post_type=page --post_title=Cart --post_status=publish",
+      "description": "Create Cart page"
+    },
+    {
+      "command": "post create --post_type=page --post_title=Checkout --post_status=publish",
+      "description": "Create Checkout page"
+    }
+  ]
+}
