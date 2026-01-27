@@ -54,6 +54,11 @@ const dbFresh = new Command('db:fresh')
       await execa(php, buildWpArgs(['rewrite', 'structure', '/%postname%/', `--path=${projectPath}`]), { env: wpEnv });
       await execa(php, buildWpArgs(['rewrite', 'flush', `--path=${projectPath}`]), { env: wpEnv });
 
+      // Clean up default content (same as wpsmith new)
+      await execa(php, buildWpArgs(['post', 'delete', '1', '--force', `--path=${projectPath}`]), { env: wpEnv }).catch(() => {});
+      await execa(php, buildWpArgs(['post', 'delete', '2', '--force', `--path=${projectPath}`]), { env: wpEnv }).catch(() => {});
+      await execa(php, buildWpArgs(['comment', 'delete', '1', '--force', `--path=${projectPath}`]), { env: wpEnv }).catch(() => {});
+
       spinner.succeed('Database reset complete');
     } catch (error) {
       spinner.fail('Failed to reset database');
