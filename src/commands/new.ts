@@ -228,13 +228,6 @@ export const newCommand = new Command('new')
     await execa(php, buildWpArgs(['rewrite', 'flush', `--path=${projectPath}`]), { env: wpEnv });
     spinner.succeed('Permalinks configured');
 
-    // Clean up default content
-    spinner.start('Cleaning up default content...');
-    await execa(php, buildWpArgs(['post', 'delete', '1', '--force', `--path=${projectPath}`]), { env: wpEnv }).catch(() => {});
-    await execa(php, buildWpArgs(['post', 'delete', '2', '--force', `--path=${projectPath}`]), { env: wpEnv }).catch(() => {});
-    await execa(php, buildWpArgs(['comment', 'delete', '1', '--force', `--path=${projectPath}`]), { env: wpEnv }).catch(() => {});
-    spinner.succeed('Default content removed');
-
     // Create blueprint.json (WordPress Playground format)
     spinner.start('Creating blueprint.json...');
     await saveBlueprint(projectPath, {
