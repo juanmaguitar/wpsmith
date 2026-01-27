@@ -7,13 +7,14 @@ import { wpCommand } from './commands/wp.js';
 import { dbCommands } from './commands/db.js';
 import { checkpointCommands } from './commands/checkpoint.js';
 import { forgeCommands } from './commands/forge.js';
+import packageJson from '../package.json' with { type: 'json' };
 
 const program = new Command();
 
 program
   .name('wpsmith')
   .description(chalk.bold('The CLI for WordPress Wordsmiths'))
-  .version('0.1.0')
+  .version(packageJson.version)
   .configureHelp({
     sortSubcommands: true,
   });
