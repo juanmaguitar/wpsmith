@@ -13,6 +13,10 @@ Laravel developers love Artisan. WPSmith brings that same elegant developer expe
 - **Interactive shell** — Like Laravel Tinker, but for WordPress
 - **Forge commands** — Scaffold plugins, themes, blocks, and more
 
+[![snapshot](./assets/snapshot.png)](https://www.youtube.com/watch?v=bzCrTWyKnI8)
+
+_See [video demo](https://www.youtube.com/watch?v=bzCrTWyKnI8)_
+
 ## Installation
 
 ```bash
