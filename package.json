@@ -1,6 +1,6 @@
 {
   "name": "wpsmith",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "The CLI for WordPress Wordsmiths - Laravel-like WordPress development with Playground and SQLite",
   "keywords": [
     "wordpress",
