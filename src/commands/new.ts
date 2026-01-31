@@ -252,8 +252,8 @@ export const newCommand = new Command('new')
         { command: 'user create editor editor@example.com --role=editor --user_pass=password', description: 'Create editor user' },
         { command: 'user create author author@example.com --role=author --user_pass=password', description: 'Create author user' },
         { command: 'post generate --count=10', description: 'Generate 10 test posts' },
-        { command: 'post create --post_type=page --post_title="About" --post_status=publish', description: 'Create About page' },
-        { command: 'post create --post_type=page --post_title="Contact" --post_status=publish', description: 'Create Contact page' },
+        { command: 'post create --post_type=page --post_title=About --post_status=publish', description: 'Create About page' },
+        { command: 'post create --post_type=page --post_title=Contact --post_status=publish', description: 'Create Contact page' },
       ],
     }, { spaces: 2 });
 
